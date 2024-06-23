@@ -2,11 +2,10 @@
 
 This repository consists of source scripts and final docker container for running a streamlit app for deep learning aided breast MRI triage and segmentation. This app uses pre-trained weights discussed in the repository ([MRI_Triage_Normal](https://github.com/Arka-Bhowmik/mri_triage_normal/)). This app can take single MRI image or batch of MRI image (i.e., in NIFTI Format) to either (a) generate AI score for being completely normal and suspicious exam, or (b) segment breast from thorax for other downstream task. Only testing is possible using this app. For re-training, users must refer to the repository ([see](https://github.com/Arka-Bhowmik/mri_triage_normal/tree/main/training)). The app is user-friendly and allow users to define threshold to personalize the deep learning prediction outcome. However, the deafult/best threshold is τ = 0.33 such that the algorithm triage completely normal exams without missing cancer.
 
-Source paper:
+1. Source paper:
 Automated Triage of Screening Breast MRI Examinations in High-Risk Women Using an Ensemble Deep Learning Model. Investigative Radiology. 2023; DOI: 10.1097/RLI.0000000000000976 <a href="https://journals.lww.com/investigativeradiology/Abstract/9900/Automated_Triage_of_Screening_Breast_MRI.104.aspx"> [View] </a>, [[Download]](https://github.com/user-attachments/files/15830061/automated_triage_mri.pdf)
 
-
-4. Further information can be obtained by writing to Arka Bhowmik (arkabhowmik@yahoo.co.uk).
+2. Further information can be obtained by writing to Arka Bhowmik (arkabhowmik@yahoo.co.uk).
 
 ## Download  🐳  docker image to run inference (see testing folder)
 

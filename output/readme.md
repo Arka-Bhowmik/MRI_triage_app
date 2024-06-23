@@ -1,6 +1,6 @@
-## OUTPUT FILES
+## DOWNLOAD FILES
 
-The output files include the path of our trained model weights. The user can download and copy these weights to the output folder (ensure same file name as downloaded). The weights can be downloaded using the below link.
+User can download and copy these weights to the output folder (keep same file name as downloaded). The weights can be downloaded using the below link.
 
 Google drive:
 

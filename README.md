@@ -20,7 +20,14 @@ cd C:\Users\Arka\Downloads                  (window command)
 cd /Users/Arka/Downloads/                   (other OS)
 docker load -i mri_triage_app.tar.gz
 ```
+*The image will appear in dashboard of Docker desktop after completion of loading.*
 
+#### Step IV: Load the downloaded Docker Image 
+Now, in the command prompt(Win) or terminal(Mac/Linux)
+```
+docker run -v "/c/Users/Arka/Desktop/image_dataset":/data -p 5000:5000 mri_triage         (window command)
+docker run -v "/Users/Arka/Desktop/image_dataset":/data -p 5000:5000 mri_triage           (other OS)
+```
 
 
 

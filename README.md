@@ -7,8 +7,20 @@ For further information can be obtained by writing to Arka Bhowmik (arkabhowmik@
 ## 🐳  docker image of app (with pre-installed packages and weights)
 Users can simply download the docker image and use following steps to run the docker image in local machine:
 
-### Step I: Download/Install Docker
-     Choose appropriate OS/architect, [Docker](https://www.docker.com/products/docker-desktop/)
+#### Step I: Download/Install Docker Desktop
+Choose appropriate OS/architect, [Docker](https://www.docker.com/products/docker-desktop/)
+
+#### Step II: Download App Docker Image 
+[MRI_triage_app](https://drive.google.com/file/d/1N9k4Le-vWJWAuTUiGJM-GX2C4uM8Q1aH/view?usp=sharing) and start docker engine in local machine by running docker desktop
+
+#### Step III: Load the downloaded Docker Image 
+Open command prompt(Win) or terminal(Mac/Linux)
+```
+cd C:\Users\Arka\Downloads                  (window command)
+cd /Users/Arka/Downloads/                   (other OS)
+docker load -i mri_triage_app.tar.gz
+```
+
 
 
 

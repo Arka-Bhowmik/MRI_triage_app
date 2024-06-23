@@ -28,8 +28,16 @@ Now, in the command prompt(Win) or terminal(Mac/Linux)
 docker run -v "/c/Users/Arka/Desktop/image_dataset":/data -p 5000:5000 mri_triage:latest    (window command)
 docker run -v "/Users/Arka/Desktop/image_dataset":/data -p 5000:5000 mri_triage:latest      (other OS)
 ```
-*This will provide an url for the app that can be copied to the browser of local machine.* In the above command use an appropriate path within " " to mount the raw data/image path of local machine with the docker container which can be accessed inside docker from /data.
+*This will provide an url for the app that can be copied to the browser of local machine.* In the above command, use an appropriate path for -v "/path/" to mount the raw data or image path of the local machine with the docker container that can be accessed inside docker from /data.
 
+#### Step V: Modify Image Path in CSV
+The app runs inference for single image or batch of NIFTI images. Batch of images are accepted by the app in the form of a file with extension (.csv or .xlsx) having the absolute image paths ordered rowise (*see* input folder for csv headers). The uploaded csv file should have same header to avoid error while the app attempt to save the probabilities.
+```
+Also modify all "File_path" column in CSV/XLSX during batch run
+(i.e., /c/Users/Arka/Desktop/image_dataset/XYZ/abc.nii.gz   to   /data/XYZ/abc.nii.gz)
+since docker already mounted /c/Users/Arka/Desktop/image_dataset/    as    /data   in step IV
+```
+Next, upload the .xlsx or .csv file and run the inference.
 
 
 Note: For restricted server, the docker image need to be created with appropriate streamlit ports in dockerfile provided.

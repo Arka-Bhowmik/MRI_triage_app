@@ -7,7 +7,8 @@ For further information can be obtained by writing to Arka Bhowmik (arkabhowmik@
 ## 🐳  docker image of app (with pre-installed packages and weights)
 Users can simply download the docker image and use following steps to run the docker image in local machine:
 
-Step I: Download and install docker desktop for your OS/architect, [Docker](https://www.docker.com/products/docker-desktop/)
+### Step I: Download/Install Docker
+     Choose appropriate OS/architect, [Docker](https://www.docker.com/products/docker-desktop/)
 
 
 

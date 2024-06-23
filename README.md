@@ -34,7 +34,7 @@ docker run -v "/Users/Arka/Desktop/image_dataset":/data -p 5000:5000 mri_triage:
 The app runs inference for single image or batch of NIFTI images. Batch of images are accepted by the app in the form of a file with extension (.csv or .xlsx) having the absolute image paths ordered rowise (*see* input folder for csv headers). The uploaded csv file should have same header to avoid error while the app attempt to save the probabilities.
 ```
 Also modify all "File_path" column in CSV/XLSX during batch run
-(i.e., /c/Users/Arka/Desktop/image_dataset/XYZ/abc.nii.gz   to   /data/XYZ/abc.nii.gz)
+(e.g., C:/Users/Arka/Desktop/image_dataset/XYZ/abc.nii.gz   to   /data/XYZ/abc.nii.gz)
 since docker already mounted /c/Users/Arka/Desktop/image_dataset/    as    /data   in step IV
 ```
 Next, upload the .xlsx or .csv file and run the inference.

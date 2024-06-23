@@ -4,7 +4,7 @@ This repository consists of source scripts and final docker container for runnin
 
 For further information can be obtained by writing to Arka Bhowmik (arkabhowmik@yahoo.co.uk).
 
-## Use the below steps to run the  🐳  docker image of the app (with pre-installed packages and weights)
+## 🐳  docker image of the app (with pre-installed packages and weights)
 This docker image has all the pre-installed packages and deep learning weights. Users can simply download the docker image and run the app in local machine.
 
 

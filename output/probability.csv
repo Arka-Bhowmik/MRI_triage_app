@@ -1,0 +1,2 @@
+File_path,Prob_right_mip,Prob_right13_submip,Prob_right23_submip,Prob_right33_submip,Prob_left_mip,Prob_left13_submip,Prob_left23_submip,Prob_left33_submip,Ensemble_probability,Predicted_labels
+/Users/arkabhowmik/Desktop/mri_triage_normal/tempDir/T1_sub.nii.gz,0.5631326198577881,0.1330195426940918,0.6239309787750245,0.5548655033111572,0.09458680152893066,0.12350610494613648,0.14902045726776122,0.39696340560913085,0.6239309787750245,1

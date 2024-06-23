@@ -40,5 +40,5 @@ since docker already mounted /c/Users/Arka/Desktop/image_dataset/    as    /data
 Next, upload the .xlsx or .csv file and run the inference.
 
 
-Note: For restricted server, the docker image need to be created with appropriate streamlit ports in dockerfile provided.
+Note: For restricted server, the docker image need to be created with appropriate streamlit ports in the provided dockerfile or by copying the git repo and placing appropriate weights in output folder. Then, install requirements.txt packages in a python environment and run the streamlit app.py from testing folder.
 

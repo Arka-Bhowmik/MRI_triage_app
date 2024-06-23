@@ -1,6 +1,6 @@
 ## OUTPUT FILES
 
-The output files include the path of our trained model weights. These weights can be used directly to test the trained algorithm on new data. The weights can be downloaded using the below link.
+The output files include the path of our trained model weights. The user can download and copy these weights to the output folder (ensure same file name as downloaded). The weights can be downloaded using the below link.
 
 Google drive:
 
@@ -17,7 +17,5 @@ Google drive:
    (d) Fold 4: https://drive.google.com/file/d/1BtPFdoxcGhGpSird5Yhp31rO4SwTIjct/view?usp=sharing
    
    (e) Fold 5: https://drive.google.com/file/d/1By51-ch1S3238AFQbOk_HAk1x7WJCqJ3/view?usp=sharing
-   
-3. Download entire weight folder: https://drive.google.com/drive/folders/1BXkoMra00l7TUwoPazDEQmItBaq-U9XR?usp=sharing
 
 

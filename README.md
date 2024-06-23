@@ -25,12 +25,12 @@ docker load -i mri_triage_app.tar.gz
 #### Step IV: Load the downloaded Docker Image 
 Now, in the command prompt(Win) or terminal(Mac/Linux)
 ```
-docker run -v "/c/Users/Arka/Desktop/image_dataset":/data -p 5000:5000 mri_triage:latest         (window command)
-docker run -v "/Users/Arka/Desktop/image_dataset":/data -p 5000:5000 mri_triage:latest           (other OS)
+docker run -v "/c/Users/Arka/Desktop/image_dataset":/data -p 5000:5000 mri_triage:latest    (window command)
+docker run -v "/Users/Arka/Desktop/image_dataset":/data -p 5000:5000 mri_triage:latest      (other OS)
 ```
+*This will provide an url for the app that can be copied to the browser of local machine.* In the above command use an appropriate path within " " to mount the raw data/image path of local machine with the docker container which can be accessed inside docker from /data.
 
 
 
-
-Note: For restricted server, the docker image need to be created with appropriate ports in dockerfile provided.
+Note: For restricted server, the docker image need to be created with appropriate streamlit ports in dockerfile provided.
 

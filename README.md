@@ -31,7 +31,7 @@ docker run -v "/Users/Arka/Desktop/image_dataset":/data -p 5000:5000 mri_triage:
 *This will provide an url for the app that can be copied to the browser of local machine.* In the above command, use an appropriate path for -v "/path/" to mount the raw data or image path of the local machine with the docker container that can be accessed inside docker from /data.
 
 #### Step V: Modify Image Path in CSV
-The app runs inference for single image or batch of NIFTI images. Batch of images are accepted by the app in the form of a file with extension (.csv or .xlsx) having the absolute image paths ordered rowise (*see* input folder for csv headers). The uploaded csv file should have same header to avoid error while the app attempt to save the probabilities.
+The app runs inference for single image or batch of NIFTI images. Batch of images are accepted by the app in the form of a file with extension (.csv or .xlsx) having the absolute image paths ordered in row (*see* input folder for csv headers). The uploaded csv file should have same header to avoid error while the app attempt to save the probabilities.
 ```
 Also modify all "File_path" column in CSV/XLSX during batch run
 (e.g., C:/Users/Arka/Desktop/image_dataset/XYZ/abc.nii.gz   to   /data/XYZ/abc.nii.gz)

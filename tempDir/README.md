@@ -3,18 +3,18 @@
 
 # HELP (RUN THIS APP ON SECURE SERVER FROM TERMINAL)
 
-## Step I: SSH to server (open terminal)
+## Step 1: SSH to server (open terminal)
 ```
-ssh -L 2222:server_address:2222 -L 2858:server_address:2858 user_name
+ssh -L 2222:server_address:2222 -L 2858:server_address:2858 user_name@server_address
 ```
 Here, replace keyword *server_address* with "actual address" and user_name with "actual user login details"
 
-#### Step II: Copy Github Repository (via terminal)
+#### Step 2: Copy Github Repository (via terminal)
 ```
 cd /data/Arka/CNN_code/
 git clone https://github.com/Arka-Bhowmik/MRI_triage_app.git
 ```
-#### Step III: Create a conda environment (via terminal) 
+#### Step 3: Create a conda environment (via terminal) 
 ```
 # Install miniconda
 mkdir /data/Arka/myenv
@@ -27,22 +27,56 @@ rm -r /data/Arka/myenv/miniconda.sh
 cd /Users/Arka/myenv/
 conda create -p /Users/Arka/myenv/gpu_env python=3.9.17
 ```
-Here, we installed and created a conda environment.
+Here, we installed and created a conda environment called "gpu_env".
 
-#### Step IV: Load the conda environment and set current dir to github folder 
+#### Step 4: Load the conda environment and set current dir to github folder 
 ```
 conda activate /data/Arka/myenv/gpu_env
 cd /data/Arka/CNN_code/mri_triage_app/
 ```
 
-#### Step V: Install neccessary packages inside environment 
+#### Step 5: Install neccessary packages inside environment 
 ```
 pip install --upgrade pip
 pip install -r requirements.txt
+pip install gdown==5.2.0
 pip cache purge
 ```
 This will set up neccessary packages.
 
-#### Step VI: Download the pre-trained model weights in output folder 
+#### Step 6: Download pre-trained model weights in output folder 
+```
+cd /data/Arka/CNN_code/mri_triage_app/output/
+
+# weight for u-net
+gdown 1WpDTAH1nOqwlicvu9mRLYhK7VGt8MlRn
+
+# weight for 1-5 fold classifier
+gdown 1EBkU6pPxDlLrJ7lWOr_Z5AWEvf6A_Xe0
+gdown 1RiX0LNdWSTFFI62PljzKxMgBpwW6eVoS
+gdown 1JD8OSsHJER2GxYkiClIVLqtEhPuQWE3p
+gdown 11KBxxw4U1TnVKn9O7ZXrI-7SoV_Ut8g6
+gdown 1AG4uE6RWs73eRRYfKS7Qu3uspY_hQ_Eb
+```
+#### Step 7: Copy the raw data folder to server folder (by manual or secure copy means)
+```
+scp -r -P 22 /data/Arka/CNN_code/mri_triage_app/ user_name@server_address:/Users/Arka/Desktop/image_dataset/
+```
+This will copy the local raw dataset folder "image_dataset" to above specified folder mri_triage_app
+
+#### Step 8: Modify the image path in local drive .csv file
+This will ensure when we upload the .csv file using our app to server it will take the "File_path" inside our server
+![CSV_screenshot](https://github.com/Arka-Bhowmik/MRI_triage_app/assets/56223140/5f8c7392-5cb5-4e8b-8efb-188beb749cb1)
+
+#### Step 9: Run the streamlit App (via server terminal)
+```
+streamlit run /data/Arka/CNN_code/mri_triage_app/testing/app.py --server.port=2858 --server.address=0.0.0.0
+```
+*Ensure to use the server port initial set (i.e., step 1) to comunicate with local device.* This will generate a url (http://0.0.0.0:2858) that can be accessed by local device by opening in a browser.
+
+#### Step 10: Press predict button (for DL prediction)
+![Predict](https://github.com/Arka-Bhowmik/MRI_triage_app/assets/56223140/c32a0841-6f29-4f20-97aa-86c0e64c3a16)
+
+
 
 

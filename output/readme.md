@@ -18,8 +18,9 @@ Google drive:
    
    (e) Fold 5: https://drive.google.com/file/d/1By51-ch1S3238AFQbOk_HAk1x7WJCqJ3/view?usp=sharing
 
+#
 ## COPY OUTPUT FILE
 <div align="center">
-<img src="https://github.com/Arka-Bhowmik/MRI_triage_app/assets/56223140/34227ddc-16e0-4b44-8af9-6c0309d4e99f" width="1200">
+<img src="https://github.com/Arka-Bhowmik/MRI_triage_app/assets/56223140/69674763-ea9e-4e6a-be50-1da78a7ad7ae" width="1000">
 </div>
 <br><br>

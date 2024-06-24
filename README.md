@@ -45,13 +45,12 @@ since docker already mounted /c/Users/Arka/Desktop/image_dataset/    as    /data
 Next, upload the .xlsx or .csv file and run the inference.
 
 #### Step VI: Copy the output files
-The app saves output probability and ROC plot (only generate roc.png file if ground truth and prediction runs inference for single image or batch of NIFTI images. Batch of images are accepted by the app in the form of a file with extension (.csv or .xlsx) having the absolute image paths ordered in row (*see* input folder for csv headers). The uploaded csv file should have same header to avoid error while the app attempt to save the probabilities.
+The app saves output "probability.csv" and ROC plot in folder output. The app only generate "roc.png" if the ground truth positive or negative is greater than #15. The saved output files can be copied from docker container from Docker desktop dashboard terminal (*see* here). 
 ```
-Also modify all "File_path" column in CSV/XLSX during batch run
-(e.g., C:/Users/Arka/Desktop/image_dataset/XYZ/abc.nii.gz   to   /data/XYZ/abc.nii.gz)
-since docker already mounted /c/Users/Arka/Desktop/image_dataset/    as    /data   in step IV
+cp /output/probability.csv /data/
+cp /output/roc.png /data/       (only applicable for list of images)
 ```
-Next, upload the .xlsx or .csv file and run the inference.
+This will save the output files in the mounted folder "/Users/Arka/Desktop/image_dataset".
 
 
 Note: For restricted server, the docker image need to be created with appropriate streamlit ports in the provided dockerfile or by copying the git repo and placing appropriate weights in output folder. Then, install requirements.txt packages in a python environment and run the streamlit app.py from testing folder.

@@ -60,7 +60,7 @@ gdown 1AG4uE6RWs73eRRYfKS7Qu3uspY_hQ_Eb
 ```
 #### Step 7: Copy the raw data folder to server folder (by manual or secure copy means)
 ```
-scp -r -P 22 /data/Arka/CNN_code/mri_triage_app/ user_name@server_address:/Users/Arka/Desktop/image_dataset/
+scp -r -P 22 /Users/Arka/Desktop/image_dataset user_name@server_address:/data/Arka/CNN_code/mri_triage_app/
 ```
 This will copy the local raw dataset folder "image_dataset" to above specified folder mri_triage_app
 

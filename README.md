@@ -4,6 +4,11 @@ This repository consists of source scripts and final docker container for runnin
 
 Further information can be obtained by writing to Arka Bhowmik (arkabhowmik@yahoo.co.uk).
 
+<div align="center">
+<img src="https://github.com/Arka-Bhowmik/MRI_triage_app/assets/56223140/34227ddc-16e0-4b44-8af9-6c0309d4e99f" width="1200">
+</div>
+<br><br>
+
 ## 🐳  docker image of app (with pre-installed packages and weights)
 Users can simply download the docker image and use following steps to run the docker image in local machine:
 

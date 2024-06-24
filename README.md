@@ -33,7 +33,7 @@ Now, in the command prompt(Win) or terminal(Mac/Linux)
 docker run -v "/c/Users/Arka/Desktop/image_dataset":/data -p 5000:5000 mri_triage:latest    (window command)
 docker run -v "/Users/Arka/Desktop/image_dataset":/data -p 5000:5000 mri_triage:latest      (other OS)
 ```
-*This will provide an url (e.g., "http://0.0.0'0:5000") for the app that can be copied to the browser of local machine.* In the above command, use an appropriate path for -v "/path/" to mount the raw data or image path of the local machine with the docker container that can be accessed inside docker from /data.
+*This will provide an url (e.g., "http://0.0.0.0:5000") for the app that can be copied to the browser of local machine.* In the above command, use an appropriate path for -v "/path/" to mount the raw data or image path of the local machine with the docker container that can be accessed inside docker from /data.
 
 #### Step V: Modify Image Path in CSV
 The app runs inference for single image or batch of NIFTI images. Batch of images are accepted by the app in the form of a file with extension (.csv or .xlsx) having the absolute image paths ordered in row (*see* input folder for csv headers). The uploaded csv file should have same header to avoid error while the app attempt to save the probabilities.
@@ -53,5 +53,5 @@ cp /output/roc.png /data/       (only applicable for list of images)
 This will save the output files in the mounted folder "/Users/Arka/Desktop/image_dataset".
 
 
-Note: For restricted server, the docker image need to be created with appropriate streamlit ports in the provided dockerfile or by copying the git repo and placing appropriate weights in output folder. Then, install requirements.txt packages in a python environment and run the streamlit app.py from testing folder.
+Note: For restricted server (*see* [Steps](https://github.com/Arka-Bhowmik/MRI_triage_app/blob/main/tempDir/README.md)), the docker image need to be created with appropriate streamlit ports in the provided dockerfile or by copying the git repo and placing appropriate weights in output folder. Then, install requirements.txt packages in a python environment and run the streamlit app.py from testing folder.
 

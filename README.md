@@ -44,8 +44,8 @@ since docker already mounted /c/Users/Arka/Desktop/image_dataset/    as    /data
 ```
 Next, upload the .xlsx or .csv file and run the inference.
 
-#### Step VI: Copy the output files
-The app saves output "probability.csv" and ROC plot in folder output. The app only generate "roc.png" if the ground truth positive or negative is greater than #15. The saved output files can be copied from docker container from Docker desktop dashboard terminal (*see* here). 
+#### Step VI: COPY output files
+The app saves output "probability.csv" and ROC plot in folder output. The app only generate "roc.png" if the ground truth positive or negative is greater than #15. The saved output files can be copied from docker container from Docker desktop dashboard terminal (*see* [output](https://github.com/Arka-Bhowmik/MRI_triage_app/tree/main/output)). 
 ```
 cp /output/probability.csv /data/
 cp /output/roc.png /data/       (only applicable for list of images)

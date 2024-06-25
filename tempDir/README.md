@@ -24,8 +24,8 @@ bash /data/Arka/myenv/miniconda.sh -b -u -p /data/Arka/myenv/miniconda3
 rm -r /data/Arka/myenv/miniconda.sh
 
 # Create a conda environment
-cd /Users/Arka/myenv/
-conda create -p /Users/Arka/myenv/gpu_env python=3.9.17
+cd /data/Arka/myenv/
+conda create -p /data/Arka/myenv/gpu_env python=3.9.17
 ```
 Here, we installed and created a conda environment called "gpu_env".
 

@@ -53,5 +53,5 @@ cp /output/roc.png /data/       (only applicable for list of images)
 This will save the output files in the mounted folder "/Users/Arka/Desktop/image_dataset".
 
 
-Note: For restricted server (*see* [Steps](https://github.com/Arka-Bhowmik/MRI_triage_app/blob/main/tempDir/README.md)), the docker image need to be created with appropriate streamlit ports in the provided dockerfile or by copying the git repo and placing appropriate weights in output folder. Then, install requirements.txt packages in a python environment and run the streamlit app.py from testing folder.
+##### Note: For restricted server (*see* [Steps](https://github.com/Arka-Bhowmik/MRI_triage_app/blob/main/tempDir/README.md)).
 

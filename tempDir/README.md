@@ -49,14 +49,14 @@ This will set up neccessary packages.
 cd /data/Arka/CNN_code/mri_triage_app/output/
 
 # weight for u-net
-gdown 1WpDTAH1nOqwlicvu9mRLYhK7VGt8MlRn
+gdown 1BY45-DKsk3cLqfcU6o0rJpG8QKozUUxg
 
 # weight for 1-5 fold classifier
-gdown 1EBkU6pPxDlLrJ7lWOr_Z5AWEvf6A_Xe0
-gdown 1RiX0LNdWSTFFI62PljzKxMgBpwW6eVoS
-gdown 1JD8OSsHJER2GxYkiClIVLqtEhPuQWE3p
-gdown 11KBxxw4U1TnVKn9O7ZXrI-7SoV_Ut8g6
-gdown 1AG4uE6RWs73eRRYfKS7Qu3uspY_hQ_Eb
+gdown 1BfA-woTZsDWmvbWep_FWetCJK0CnbPXF
+gdown 1Bkzu9PMuSmXWYulcVgkJPFGHmz0KWQlq
+gdown 1Bs3eAVmOXfuLgPae0PQJduHVJ2QBICyX
+gdown 1BtPFdoxcGhGpSird5Yhp31rO4SwTIjct
+gdown 1By51-ch1S3238AFQbOk_HAk1x7WJCqJ3
 ```
 #### Step 7: Copy the raw data folder to server folder (by manual or secure copy means)
 ```
@@ -76,7 +76,3 @@ streamlit run /data/Arka/CNN_code/mri_triage_app/testing/app.py --server.port=28
 
 #### Step 10: Press predict button (for DL prediction)
 ![Predict](https://github.com/Arka-Bhowmik/MRI_triage_app/assets/56223140/c32a0841-6f29-4f20-97aa-86c0e64c3a16)
-
-
-
-

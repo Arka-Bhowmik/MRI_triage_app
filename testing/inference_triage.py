@@ -205,8 +205,7 @@ def ai_predict_fn(batch, threshold, default_path, file_path, file_name):
     gpu_available = tf.config.list_physical_devices('GPU')
     if gpu_available:
         """ Set gpu device """
-        gpus = tf.config.experimental.list_physical_devices('GPU')
-        tf.config.set_visible_devices(gpus[0], 'GPU')
+        tf.config.set_visible_devices(gpu_available[0], 'GPU')
     #
     """ load combined models (unet + fold1-5) """
     model_fold1 = combined_model(load_models, combined_encoder, hp["model_path"], hp["saved_model"][0], hp["saved_model"][1])

@@ -32,7 +32,7 @@ Here, we installed and created a conda environment called "gpu_env".
 #### Step 4: Load the conda environment and set current dir to github folder 
 ```
 conda activate /data/Arka/myenv/gpu_env
-cd /data/Arka/CNN_code/mri_triage_app/
+cd /data/Arka/CNN_code/MRI_triage_app/
 ```
 
 #### Step 5: Install neccessary packages inside environment 
@@ -46,7 +46,7 @@ This will set up neccessary packages.
 
 #### Step 6: Download pre-trained model weights in output folder 
 ```
-cd /data/Arka/CNN_code/mri_triage_app/output/
+cd /data/Arka/CNN_code/MRI_triage_app/output/
 
 # weight for u-net
 gdown 1BY45-DKsk3cLqfcU6o0rJpG8QKozUUxg
@@ -60,7 +60,7 @@ gdown 1By51-ch1S3238AFQbOk_HAk1x7WJCqJ3
 ```
 #### Step 7: Copy the raw data folder to server folder (by manual or secure copy means)
 ```
-scp -r -P 22 /Users/Arka/Desktop/image_dataset user_name@server_address:/data/Arka/CNN_code/mri_triage_app/
+scp -r -P 22 /Users/Arka/Desktop/image_dataset user_name@server_address:/data/Arka/CNN_code/MRI_triage_app/
 ```
 This will copy the local raw dataset folder "image_dataset" to above specified folder mri_triage_app
 
@@ -70,7 +70,7 @@ This will ensure when we upload the .csv file using our app to server it will ta
 
 #### Step 9: Run the streamlit App (via server terminal)
 ```
-streamlit run /data/Arka/CNN_code/mri_triage_app/testing/app.py --server.port=2858 --server.address=0.0.0.0
+streamlit run /data/Arka/CNN_code/MRI_triage_app/testing/app.py --server.port=2858 --server.address=0.0.0.0
 ```
 *Ensure to use the server port initial set (i.e., step 1) to comunicate with local device.* This will generate a url (http://0.0.0.0:2858) that can be accessed by local device by opening in a browser.
 

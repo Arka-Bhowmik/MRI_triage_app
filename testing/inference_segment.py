@@ -195,8 +195,7 @@ def ai_predict_fn(batch, default_path, file_path, file_name, img_type):
     gpu_available = tf.config.list_physical_devices('GPU')
     if gpu_available:
         """ Set gpu device """
-        gpus = tf.config.experimental.list_physical_devices('GPU')
-        tf.config.set_visible_devices(gpus[0], 'GPU')
+        tf.config.set_visible_devices(gpu_available[0], 'GPU')
     #
     """ load combined input models (unet multi-input mip, submip13-submip33) """
     model = combined_input(load_unet, create_mask, hp["model_path"], hp["saved_model"])

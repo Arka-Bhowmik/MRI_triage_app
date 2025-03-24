@@ -71,8 +71,10 @@ This will ensure when we upload the .csv file using our app to server it will ta
 #### Step 9: Run the streamlit App (via server terminal)
 ```
 streamlit run /data/Arka/CNN_code/MRI_triage_app/testing/app.py --server.port=2858 --server.address=0.0.0.0
+                              OR
+streamlit run /data/Arka/CNN_code/MRI_triage_app/testing/app.py --server.port=2858
 ```
-*Ensure to use the server port initial set (i.e., step 1) to comunicate with local device.* This will generate a url (http://0.0.0.0:2858) that can be accessed by local device by opening in a browser.
+*Ensure to use the server port initial set (i.e., step 1) to comunicate with local device.* This will generate a url (http://0.0.0.0:2858) that can be accessed by local device by opening in a browser or using second option that will provide url address within network.
 
 #### Step 10: Press predict button (for DL prediction)
 ![Predict](https://github.com/Arka-Bhowmik/MRI_triage_app/assets/56223140/c32a0841-6f29-4f20-97aa-86c0e64c3a16)

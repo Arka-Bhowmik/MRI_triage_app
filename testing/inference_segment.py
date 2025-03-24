@@ -19,6 +19,7 @@ import numpy                as np
 import pandas               as pd
 import nibabel              as nib
 from scipy                  import ndimage
+from einops                 import rearrange
 import matplotlib.pyplot    as plt
 #
 """ Load custom functions """
@@ -37,7 +38,11 @@ def load_data(imgpaths_temp):
     """
     #
     """ Read image """
-    image = nib.load(os.path.join(imgpaths_temp)).get_fdata() # shape (w, h, slice)
+    image = nib.load(os.path.join(imgpaths_temp)).get_fdata() # Expected shape (w, h, slices)
+    # If Expected shape is not (w, h, slices) than it will be reshaped to (w, h, slices)
+    if (image.shape[1]==image.shape[2]) and (image.shape[0]!=image.shape[1]) and (image.shape[0]!=image.shape[2]):
+        """ Modify the orientation from slice, width, height --> width, height, slice """
+        image = rearrange(image, 'h w c -> w c h') # shape (width, height, slice_num)
     #
     if (image.shape[0] == 512) and (image.shape[1] == 512):
         pass
